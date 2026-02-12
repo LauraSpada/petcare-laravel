@@ -11,4 +11,9 @@ class Client extends Model
         'name',
         'phone',
     ];
+
+    public function animals()
+    {
+        return $this->hasMany(Animal::class);
+    }
 }
