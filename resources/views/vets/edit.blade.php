@@ -8,12 +8,12 @@
         <div>
           <div>
             <label for="crmv">CRMV</label><br>
-            <input type="text" name="crmv" value="{{ old('crmv', $vet->crmv) }}" required>
+            <input type="text" name="crmv" value="{{ old('crmv', $vet->crmv) }}" readonly>
           </div>
 
           <div>
           <label for="name">Name</label><br>
-          <input type="text" name="name" value="{{ old('name', $vet->name) }}" required>
+          <input type="text" name="name" value="{{ old('name', $vet->name) }}" readonly>
           </div>
 
           <div>

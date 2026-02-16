@@ -12,4 +12,9 @@ class Vet extends Model
         'adm_date',
         'salary',
     ];     
+
+    public function vets()
+    {
+        return $this->hasMany(Vet::class);
+    }
 }

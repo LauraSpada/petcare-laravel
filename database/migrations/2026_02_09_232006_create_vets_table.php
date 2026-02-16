@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('crmv',35);
             $table->string('name',35);
             $table->date('adm_date');
-            $table->decimal('salary',8,2);
+            $table->decimal('salary',8,3);
             $table->timestamps();
         });
     }

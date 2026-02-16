@@ -22,7 +22,7 @@
 
           <div>
             <label for="salary">Salary</label><br>
-            <input type="number" name="salary" value="" placeholder="Type salary" >
+            <input type="number" step="0.02" min="0" name="salary" value="" placeholder="Type salary" >
           </div>
         </div>
 

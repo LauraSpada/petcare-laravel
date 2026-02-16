@@ -33,7 +33,7 @@
 
             <div>
                 <label for="owner">Owner</label>
-                    <select name="id_client" id="id_client" required>
+                    <select name="client_id" id="client_id" required>
                         <option value="">Selecione...</option>
                         @foreach($clients as $c)
                             <option value="{{ $c->id }}">

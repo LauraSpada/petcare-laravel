@@ -12,11 +12,16 @@ class Animal extends Model
         'b_date',
         'weight',
         'gender',
-        'id_client',
+        'client_id',
     ];
 
     public function client()
     {
-        return $this->belongsTo(Client::class, 'id_client');
+        return $this->belongsTo(Client::class, 'client_id');
+    }
+
+    public function consultations()
+    {
+        return $this->hasMany(Consultation::class);
     }
 }

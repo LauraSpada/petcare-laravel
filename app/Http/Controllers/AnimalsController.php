@@ -29,7 +29,7 @@ class AnimalsController extends Controller
             'b_date' => $request -> input('b_date'),
             'weight' => $request -> input('weight'),
             'gender' => $request -> input('gender'),
-            'id_client' => $request -> input('id_client'),]);
+            'client_id' => $request -> input('client_id'),]);
 
         $animal->save();
 
@@ -54,7 +54,7 @@ class AnimalsController extends Controller
             'b_date' => 'required|date',
             'weight' => 'required|numeric',
             'gender' => 'required|string',
-            'id_client' => 'required',
+            'client_id' => 'required',
         ]);
 
         $animal->update($validated);

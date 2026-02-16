@@ -17,7 +17,7 @@
 
           <div>
             <label for="phone">Phone</label><br>
-            <input type="text" name="phone" value="" placeholder="Type admission phone" >
+            <input type="text" name="phone" value="" placeholder="Type phone" >
           </div>
         </div>
 
