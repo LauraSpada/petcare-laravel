@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Consultation;
 use App\Models\Client;
 use App\Models\Animal;
 use Illuminate\Http\Request;
@@ -36,8 +37,9 @@ class AnimalsController extends Controller
         return redirect()->route('animals.index', $animal);
     }
 
-    public function show(Animal $animal)
+    public function show($id)
     {
+        $animal = Animal::with('consultations')->findOrFail($id);
         return view('animals.show', compact('animal'));
     }
     

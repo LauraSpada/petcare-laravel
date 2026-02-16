@@ -1,6 +1,6 @@
 <x-layout title="Consultations list" header="Consultations">
 
-    <h1>Lista de Consultations</h1>
+    <h1>Lista de Consultations de '{{ $consultation->animal->name}}'</h1>
 
     <a href="{{ route('consultations.create') }}">add</a>
 
@@ -22,7 +22,6 @@
                     <td>{{ $consultation->hour }}</td>
                     <td>{{ $consultation->reason }}</td>
                     <td>
-                        <a href="{{ route('consultations.show', $consultation->id) }}">Show</a>
                         <a href="{{ route('consultations.edit', $consultation->id) }}">Edit</a>
                         <form action="{{ route('consultations.destroy', $consultation->id) }}" method="POST" style="display:inline;">
                             @csrf

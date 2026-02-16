@@ -32,4 +32,19 @@
                 </tr>
         </tbody>
     </table>
+
+    @if ($animal->consultations->count())
+        <ul>
+            @foreach ($animal->consultations as $c)
+                <li>
+                    <p><strong>Date:</strong> {{ $c->date }}</p>
+                    <p><strong>Hour:</strong> {{ $c->hour }}</p>
+                    <p><strong>Reason:</strong> {{ $c->reason }}</p>
+                </li>
+            @endforeach
+        </ul>
+        <a href="{{ route('consultations.show', $animal->id) }}">See c</a>
+    @else
+        <p>Este animal ainda não possui consultas.</p>
+    @endif
 </x-layout>
